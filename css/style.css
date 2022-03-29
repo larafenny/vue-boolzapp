@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.background-container{
+    height: 100vh;
+    width: 100vw;
+}
+
+.upper-bkg-container{
+    height: 20%;
+    background-color: hsl(174deg 100% 29%);
+}
+
+.down-bkg-container{
+    height: 80%;
+    background-color: hsl(132deg 6% 85%);
+}
+
