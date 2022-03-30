@@ -128,7 +128,31 @@
 
 .contact-container{
     background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+
 }
+
+.contact-container img{
+    background-color: white;
+    display: flex;
+    height: 50px;
+    border-radius: 50px;
+    margin-right: 20px;    
+}
+
+.user-messagge .nome{
+    font-size: 20px;
+}
+
+.user-messagge .last-message{
+    font-size: 14px;
+    color: grey;
+}
+
+
+
 
 /****** right side container ********/
 
