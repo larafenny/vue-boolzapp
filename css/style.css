@@ -23,8 +23,9 @@
 
 .boolzapp-container{
     position: absolute;
-    top: 10px;
-    right: 20px;
+    top: 0px;
+    left: 0px;
+    margin: 2.5%;
     width: 95%;
     height: 95%;
 }
@@ -69,24 +70,19 @@
     padding: 0 5px;
 }
 
+/*********************** MAIN CONTAINER ******************/
+
 .main-container{
     display: flex;
     height: calc(100% - 60px);
 }
 
+/********* left side container *****/
 .left-side-container{
     display: flex;
     flex-direction: column;
     width: 40%;
-    
     background-color: white;
-}
-
-.right-side-container{
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    background-color: green;
 }
 
 .notify{
@@ -95,13 +91,11 @@
     align-items: center;
     display: flex;
     padding: 10px;
-
 }
 
 .notify-text h4{
     font-size: 12px;
     padding-left: 10px;
-
 }
 
 .notify-text h5{
@@ -134,4 +128,24 @@
 
 .contact-container{
     background-color: white;
+}
+
+/****** right side container ********/
+
+.right-side-container{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    /*background-image: url("/img/mine.jpg");*/
+    background-color:grey;
+}
+
+.messages-container{
+    height: calc(100% - 50px);
+    background-color: red;
+}
+
+.text-messagge-container{
+    height: 50px;
+    background-color: blue;
 }
