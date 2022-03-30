@@ -71,6 +71,37 @@
 }
 
 
-.left-side.container{
-    
+.left-side-container{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.notify{
+    background-color: hsl(199deg 95% 77%);
+    height: 50px;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+
+}
+
+.notify-text h4{
+    font-size: 12px;
+    padding-left: 10px;
+
+}
+
+.notify-text h5{
+    font-size: 10px;
+    color: hsl(199deg 37% 58%);
+    text-decoration: underline;
+    padding-left: 10px;
+}
+
+.notify i{
+    border-radius: 50%;
+    padding: 7px ;
+    background-color: white;
+    color: hsl(199deg 95% 77%);
 }
