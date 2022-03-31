@@ -83,18 +83,11 @@
         
                 <!--right side container-->
                 <div class="right-side-container">
-                    <div 
-                    v-for="message in selectedContact.messages"
-                    class="messages-container" 
-                    :class="message.status"
-                    >
-                        {{message.message)}}
-                    </div>
-                        
-                        <div  class="received-message">
-                           
-                        </div>
-                        <div class="sent-message">si</div>
+                    <div class="messages-container">
+                        <div v-for="message in selectedContact.messages"
+                            :class="message.status">
+                                {{message.message}}
+                            </div>
                     </div>
                     <div class="text-messagge-container">
                         <i class="fa-regular fa-face-smile"></i>
