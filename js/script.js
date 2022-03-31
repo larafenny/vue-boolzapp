@@ -168,7 +168,8 @@ const contacts= [
 // app Vue
 const app = new Vue({
     el: '#background-container',
-    data: {contacts
+    data: {
+        contacts
     }
 });
 

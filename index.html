@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
     <title>vue-boolzapp</title>
 </head>
 <body>
-    <div class="background-container">
+    <div id="background-container">
         <div class="upper-bkg-container"></div>
         <div class="down-bkg-container"></div>
         <div class="boolzapp-container">
@@ -64,22 +64,21 @@
                         <input type="text" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <!--contact container-->
-                    <div class="contact-container">
+                    <div v-for="contact in contacts" class="contact-container">
                         <div class="img">
-                            <img src="img/avatar_io.jpg" alt="mio avatar">
+                            <img v-bind:src="'img/avatar'+contact.avatar+'.jpg'" v-bind:alt="contact.name">
                         </div>
                         <div class="user-messagge">
-                            <div class="nome">Sofia</div>
+                            {{contact.name}}
                             <div class="last-message">Ultimo messaggio inviato</div>
                         </div>
                         <div class="hour">12:00</div>                        
                     </div>
                 </div>
-                
+        
                 <!--right side container-->
                 <div class="right-side-container">
                     <div class="messages-container">
-
                     </div>
                     <div class="text-messagge-container">
                         <i class="fa-regular fa-face-smile"></i>
@@ -88,10 +87,5 @@
 
                 </div>
             </div>
-            
-
-                
         </div>
-
-
     </div>
