@@ -193,7 +193,10 @@ const app = new Vue({
             console.log(this.selectedContact.name);
         }
 
-        
+        /*conversationsReceived(received){
+            const receivedMessages = contact.message;
+            return receivedMessages;
+        }*/
     }
 
 });
