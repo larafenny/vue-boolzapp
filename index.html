@@ -36,9 +36,10 @@
                 <div class="right-header">
                     <div class="left-side">
                         <div class="img">
-                            <img :src="'img/avatar' + selectedContact.avatar + '.jpg'" alt="mio avatar">
+                            <img :src="'img/avatar' + selectedContact.avatar + '.jpg'" alt="'avatar di ' + selectedContact.name">
                         </div>
-                        <div class="nome">Michele</div>
+                        <div class="nome">
+                            {{selectedContact.name}}</div>
                     </div>
                     <div class="right-side">
                         <i class="fa-solid fa-circle-notch"></i>
@@ -82,9 +83,16 @@
         
                 <!--right side container-->
                 <div class="right-side-container">
-                    <div class="messages-container">
-                        <div class="received-message">
-                           <!--{{receivedMessages(contact)}}--> 
+                    <div 
+                    v-for="message in selectedContact.messages"
+                    class="messages-container" 
+                    :class="message.status"
+                    >
+                        {{message.message)}}
+                    </div>
+                        
+                        <div  class="received-message">
+                           
                         </div>
                         <div class="sent-message">si</div>
                     </div>
