@@ -36,7 +36,7 @@
                 <div class="right-header">
                     <div class="left-side">
                         <div class="img">
-                            <img src="img/avatar_1.jpg" alt="mio avatar">
+                            <img :src="'img/avatar' + selectedContact.avatar + '.jpg'" alt="mio avatar">
                         </div>
                         <div class="nome">Michele</div>
                     </div>
@@ -64,7 +64,11 @@
                         <input type="text" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <!--contact container-->
-                    <div v-for="contact in contacts" class="contact-container">
+                    <div 
+                        v-for="contact in contacts" 
+                        class="contact-container" 
+                        @click="selectContact(contact)"
+                    >
                         <div class="img">
                             <img v-bind:src="'img/avatar'+contact.avatar+'.jpg'" v-bind:alt="contact.name">
                         </div>
@@ -79,6 +83,10 @@
                 <!--right side container-->
                 <div class="right-side-container">
                     <div class="messages-container">
+                        <div class="received-message">
+                           <!--{{receivedMessages(contact)}}--> 
+                        </div>
+                        <div class="sent-message">si</div>
                     </div>
                     <div class="text-messagge-container">
                         <i class="fa-regular fa-face-smile"></i>

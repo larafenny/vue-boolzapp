@@ -169,16 +169,31 @@ const contacts= [
 const app = new Vue({
     el: '#background-container',
     data: {
-        contacts
+        contacts,
+        selectedContact: contacts[0],
     },
     methods:{
+        /**
+         * Given a contact, return the last message sent by the contact
+         * @param contact - The contact object that you want to get the last message from.
+         * @returns The last message in the messages array.
+         */
         getLastMessage(contact){
-        const messages = contact.messages;
-        const lastMessage = messages[messages.length-1].message;
-        return lastMessage;
+            const messages = contact.messages;
+            const lastMessage = (messages.length>0) ? messages[messages.length-1].message : '-------';
+            return lastMessage;
+        },
 
-
+        /**
+         * It selects a contact from the list of contacts.
+         * @param contact - The contact object that was selected.
+         */
+        selectContact(contact){
+            this.selectedContact = contact;
+            console.log(this.selectedContact.name);
         }
+
+        
     }
 
 });
