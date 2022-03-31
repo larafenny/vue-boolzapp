@@ -69,8 +69,8 @@
                             <img v-bind:src="'img/avatar'+contact.avatar+'.jpg'" v-bind:alt="contact.name">
                         </div>
                         <div class="user-messagge">
-                            {{contact.name}}
-                            <div class="last-message">Ultimo messaggio inviato</div>
+                            <div class="nome">{{contact.name}}</div>
+                            <div class="last-message">{{getLastMessage(contact)}}</div>
                         </div>
                         <div class="hour">12:00</div>                        
                     </div>

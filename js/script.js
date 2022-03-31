@@ -170,6 +170,16 @@ const app = new Vue({
     el: '#background-container',
     data: {
         contacts
+    },
+    methods:{
+        getLastMessage(contact){
+        const messages = contact.messages;
+        const lastMessage = messages[messages.length-1].message;
+        return lastMessage;
+
+
+        }
     }
+
 });
 
