@@ -171,6 +171,7 @@ const app = new Vue({
     data: {
         contacts,
         selectedContact: contacts[0],
+        textNewMessage: '',
     },
     methods:{
         /**
@@ -191,13 +192,22 @@ const app = new Vue({
         selectContact(contact){
             this.selectedContact = contact;
             console.log(this.selectedContact.name);
-        }
+        },
 
-        /*conversationsReceived(received){
-            const receivedMessages = contact.message;
-            return receivedMessages;
-        }*/
+        /**
+         * Add a new message to the selected contact's messages array
+         */
+        addMessage() {
+            const textNewMessage = {
+                date: "",
+                message: this.textNewMessage,
+                status: "sent",
+              };
+
+            this.selectedContact.messages.push(textNewMessage);
+            this.textNewMessage = "";
+        }
+        
     }
 
 });
-
